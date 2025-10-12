@@ -1,10 +1,10 @@
 - name: create roboshop system user
   ansible.builtin.user:
    name: roboshop 
-  comment: Roboshop System User
-  system: true
-  shell: /sbin/nologin
-  home: /app
+   comment: Roboshop System User
+   system: true
+   shell: /sbin/nologin
+   home: /app
 
 - name: remove the app directory
   ansible.builtin.file:
