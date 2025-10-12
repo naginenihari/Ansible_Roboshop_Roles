@@ -6,8 +6,8 @@
 
 - name: install redis module
   ansible.builtin.package:
-  name: redis
-  state: present
+   name: redis
+   state: present
 - name: update listen address to allow remote connections
   ansible.builtin.replace:
     path: /etc/redis/redis.conf
