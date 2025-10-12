@@ -1,2 +1,2 @@
-RABBITMA_USER: roboshop
-RAMMITMQ_PASSWORD: roboshop123
+RABBITMQ_USER: roboshop
+RABBITMQ_PASS: roboshop123
