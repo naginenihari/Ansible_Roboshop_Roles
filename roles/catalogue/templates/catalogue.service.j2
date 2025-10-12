@@ -6,7 +6,6 @@ User=roboshop
 Environment=MONGO=true
 // highlight-start
 Environment=MONGO_URL="mongodb://{{ MONGODB_HOST }}.store:27017/catalogue"
-Environment=TOOL="ANSIBLE"
 // highlight-end
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=catalogue
