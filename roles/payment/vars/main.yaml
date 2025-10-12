@@ -1,3 +1,2 @@
-MYSQL_ROOT_USER: root
-MYSQL_ROOT_PASSWORD: RoboShop@1
-version: 1.0 
+RABBITMA_USER: roboshop
+RAMMITMQ_PASSWORD: roboshop123
