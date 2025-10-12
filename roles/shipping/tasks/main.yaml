@@ -21,8 +21,8 @@
   community.mysql.mysql_db:
     name: all
     state: import
-    login_host: mysql.naginenihariaws.store
-    login_user: "{{ MYSQL_HOST }}"
+    login_host: "{{ MYSQL_HOST }}"
+    login_user: "{{ MYSQL_ROOT_USER }}"
     login_password: "{{ MYSQL_ROOT_PASSWORD }}"
     target: "{{ item }}"
   loop:
