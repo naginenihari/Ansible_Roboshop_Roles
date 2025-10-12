@@ -18,17 +18,17 @@
     name: mongodb-mongosh
     state: present 
 
-- name: connect mongodb {{ component }}
-  ansible.builtin.command: mongosh {{ MONGODB_HOST }} --quiet --eval "db.getMongo().getDBNames().indexOf('{{ component }}')"
-  register: "{{ component }}_output"
+- name: connect mongodb catalogue
+  ansible.builtin.command: mongosh {{ MONGODB_HOST }} --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
+  register: "catalogue_output"
 
-- name: print {{ component }} output
+- name: print catalogue output
   ansible.builtin.debug:
-    msg: "{{ {{ component }}_output }}"
+    msg: "{{ catalogue_output }}"
 
-- name: load the {{ component }} products into mongodb
+- name: load the catalogue products into mongodb
   ansible.builtin.shell:  mongosh --host {{ MONGODB_HOST }} </app/db/master-data.js
-  when: "{{ component }}_output.stdout | int < 0"
+  when: "catalogue_output.stdout | int < 0"
 
 - name: systemd setup
   ansible.builtin.import_role:
