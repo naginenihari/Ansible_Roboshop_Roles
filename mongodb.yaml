@@ -1,5 +1,0 @@
-- name: set mongodb server
-  hosts: mongodb
-  become: yes
-  roles:
-  - mongodb
