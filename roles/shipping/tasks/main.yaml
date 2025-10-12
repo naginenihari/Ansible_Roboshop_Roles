@@ -17,6 +17,18 @@
     name: common
     tasks_from: java_setup.yaml
 
+- name: import shipping data into mysql
+  community.mysql.mysql_db:
+    name: all
+    state: import
+    login_host: mysql.naginenihariaws.store
+    login_user: "{{ MYSQL_HOST }}"
+    login_password: "{{ MYSQL_ROOT_PASSWORD }}"
+    target: "{{ item }}"
+  loop:
+  -  /app/db/schema.sql
+  - /app/db/app-user.sql 
+  - /app/db/master-data.sql
 
 - name: systemd setup
   ansible.builtin.import_role:
