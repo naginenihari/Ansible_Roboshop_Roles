@@ -33,7 +33,7 @@
 - name: remove deafult content
   ansible.builtin.file:
     state: absent
-    path: /etc/nginx/nginx.conf
+    path: /etc/nginx/nginx.conf/
 
 - name: copy nginx config file
   ansible.builtin.template:
