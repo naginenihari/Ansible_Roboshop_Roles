@@ -6,23 +6,23 @@
 
 - name: install nginx 1.24
   ansible.builtin.dnf:
-   name: nginx
-   state: present
+    name: nginx
+    state: present
 
 - name: remove html directory
   ansible.builtin.file:
-   state: absent
-   path: /usr/share/nginx/html/
+    state: absent
+    path: /usr/share/nginx/html/
 
 - name: create html directory
   ansible.builtin.file:
-   path: /usr/share/nginx/html/
-   state: directory
+    path: /usr/share/nginx/html/
+    state: directory
 
 - name: Download frontend application code
   ansible.builtin.get_url:
-   url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
-   dest: /tmp/frontend.zip
+    url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+    dest: /tmp/frontend.zip
 
 - name: extract the frontend application code
   ansible.builtin.unarchive:
