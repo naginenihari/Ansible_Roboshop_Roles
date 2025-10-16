@@ -11,6 +11,7 @@
    state: absent
    path: /app
 
+
 - name: create app directory
   ansible.builtin.file:
    state: directory
