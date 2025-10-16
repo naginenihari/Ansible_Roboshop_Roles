@@ -2,8 +2,7 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: app_setup.yaml
-  tags:
-  - deployment
+
 - name: nodejs setup
   ansible.builtin.import_role:
     name: common
@@ -13,5 +12,4 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: systemd_setup.yaml
-  tags:
-  - deployment
+ 
