@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   AMI_ID: "ami-09c813fb71547fc4f"
+   AMI_ID: "ami-0220d79f3f480ecf5"
    SG_ID: "sg-03cb88a1f45cb9264"
    SUBNET_ID: "subnet-082ea67177f9bd542"
    HOSTED_ZONE: "Z05202297D7QR4S9L2JB"
